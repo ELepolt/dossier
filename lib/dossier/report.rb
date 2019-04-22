@@ -25,7 +25,7 @@ module Dossier
     end
 
     def initialize(options = ActionController::Parameters.new)
-      @options = options.dup
+      @options = options.dup.to_unsafe_h
     end
 
     def sql
